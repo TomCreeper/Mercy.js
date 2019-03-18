@@ -4,14 +4,14 @@ module.exports = {
 		request(theURL, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 			
-				//imageStart = body.indexOf("//4walled.cc/show");
-				//imageUrl = "https:" + body.substring((imageStart), (imageStart + 290))
-				//resStart = imageUrl.indexOf("Resolution");
-				//resText = imageUrl.substring((resStart), (resStart + 40))
-				//resEnd = resText.indexOf("'")
-				//resolution = resText.substring(0, resEnd)
-				//imageEnd = imageUrl.indexOf("target") - 2
-				//imageUrl = imageUrl.substring(0, imageEnd)
+				imageStart = body.indexOf("//4walled.cc/show");
+				imageUrl = "https:" + body.substring((imageStart), (imageStart + 290))
+				resStart = imageUrl.indexOf("Resolution");
+				resText = imageUrl.substring((resStart), (resStart + 40))
+				resEnd = resText.indexOf("'")
+				resolution = resText.substring(0, resEnd)
+				imageEnd = imageUrl.indexOf("target") - 2
+				imageUrl = imageUrl.substring(0, imageEnd)
 				
 				console.log(body.length);
 				
